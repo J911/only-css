@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .slide-menu {
+                display: inline-block;
+                width: 0;
+                height: 100vh;
+            
+                overflow: hidden;
+                background-color: rgb(39, 39, 39);
+                color: #fff;
+                transition: all 0.2s;
+            }
+            input[type="checkbox"]#menu:checked + .slide-menu{ 
+                width: 200px;
+                transition: all 0.2s;
+            }
+            .slide-menu__nav {
+                list-style: none;
+                padding: 0;
+            }
+            .slide-menu__nav .item {
+                margin: 0;
+                padding: 10px 20px;
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+            .slide-menu__nav .item:hover {
+                background-color: rgb(54, 54, 54);
+            }
+            .nav-btn {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                background-color: rgba(255, 255, 255, 0.432);
+                color: #fff;
+                vertical-align: top;
+                cursor: pointer;
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+            input[type="checkbox"]#menu {
+                display: none;
+            }
+            .nav-btn .line {
+                position: absolute;
+                top: 20%;
+                height: 1.8px;
+                width: 40px;
+                background-color: rgba(0, 0, 0, 0.473);
+            }
+            .nav-btn .line:nth-child(1) {
+                top: 30%;
+                transition: all .8s;
+            }
+            .nav-btn .line:nth-child(2) {
+                top: 50%;
+                transition: all .2s;
+            }
+            .nav-btn .line:nth-child(3) {
+                top: 70%;
+                transition: all .8s;
+            }
+            #menu:checked + 
+            .slide-menu + 
+            .nav-btn 
+            .line:nth-child(1) {
+                top: 50%;
+                transform: rotate(405deg);
+                transition: all .8s;
+            }
+            #menu:checked + 
+            .slide-menu + 
+            .nav-btn 
+            .line:nth-child(2) {
+                top: 50%;
+                opacity: 0;
+                transition: all .2s;
+            }
+            #menu:checked + 
+            .slide-menu + 
+            .nav-btn 
+            .line:nth-child(3){
+                top: 50%;
+                transform: rotate(-405deg);
+                transition: all .8s;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="checkbox" id="menu">
+        <div class="slide-menu">
+            <ul class="slide-menu__nav">
+                <li class="item">menu1</li>
+                <li class="item">menu2</li>
+                <li class="item">menu3</li>
+                <li class="item">menu4</li>
+                <li class="item">menu5</li>
+                <li class="item">menu6</li>
+                <li class="item">menu7</li>
+                <li class="item">menu8</li>
+                <li class="item">menu9</li>
+                <li class="item">menu10</li>
+            </ul>
+        </div>
+        <label class="nav-btn" for="menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    
+    </body>
+</html>
