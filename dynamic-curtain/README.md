@@ -1,4 +1,4 @@
-# Dynamic Curtain Ony CSS
+# Dynamic Curtain Only CSS
 
 ## preview 
 ![dynamic-curtain](./dynamic-curtain.gif)
